@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 export const useAxios = (type, url, body = null, headers = {}) => {
   const [state, setState] = useState({ data: null, loading: true, error: null });
   useEffect(() => {
+    console.log(body);
     setState({ data: null, loading: true, error: null });
     if (url) {
       const option = {

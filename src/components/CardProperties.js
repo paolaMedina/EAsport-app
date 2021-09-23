@@ -62,11 +62,10 @@ export const CardProperties = ({ player }) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10 minutes.
-          </Typography>
-          <Typography paragraph>Heat oil in a (14- to 16-inch) paella pan or a large.</Typography>
+          <Typography paragraph>Name : {player.name}</Typography>
+          <Typography paragraph>Position : {player.position}</Typography>
+          <Typography paragraph>Nation : {player.nation}</Typography>
+          <Typography paragraph>{player.team && `Team:${player.team}`}</Typography>
         </CardContent>
       </Collapse>
     </Card>

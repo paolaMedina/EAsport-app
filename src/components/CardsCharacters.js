@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Paper } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { CardProperties } from './CardProperties';
 
@@ -18,9 +18,9 @@ export const CardsCharacters = ({ players }) => {
   return (
     <Grid container className={classes.root}>
       <Grid item xs={12}>
-        <Grid container justifyContent="center" spacing={2}>
+        <Grid container justifyContent="center" spacing={6}>
           {players.map((value, i) => (
-            <Grid key={value.id} item>
+            <Grid key={value.name} item>
               <CardProperties className={classes.paper} player={value} />
             </Grid>
           ))}
